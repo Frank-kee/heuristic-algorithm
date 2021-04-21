@@ -157,7 +157,11 @@ def solve(file_name):
     print("现在温度为：", t)
     print("最佳路线：", best)
     print("最佳距离：", best_total_dis)  
-    # draw(best,city_x,city_y,n_len)   
+    print("点总数：", n_len)  
+    
+    city_x = [x/1000 for x in city_x] #因为上面x1000, 所以除去1000
+    city_y = [x/1000 for x in city_y]
+    draw(best,city_x,city_y,n_len)    
     return best
 if __name__=="__main__":
     start = time.time()
